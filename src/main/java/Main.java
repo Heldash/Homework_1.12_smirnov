@@ -40,9 +40,9 @@ public class Main {
         while (yesNo.isEmpty()){
             System.out.print("Машина новая? Введите да или нет: ");
             yesNo = scan.next();
-            if (yesNo.toLowerCase().equals("да")){
+            if (yesNo.equalsIgnoreCase("да")){
                 used =false;
-            } else if (yesNo.toLowerCase().equals("нет")) {
+            } else if (yesNo.equalsIgnoreCase("нет")) {
                 used = true;
             } else{
                 System.out.println("Я вас не понимаю введите да или нет: ");
@@ -75,7 +75,7 @@ public class Main {
                     System.out.println("Объем мотора не может быть меньше или равен нулю");
                 }
             } catch (InputMismatchException ex){
-                System.out.println("Вы ввыелии не число, введите значение правильно");
+                System.out.println("Вы ввели не число, введите значение правильно");
                 scan.nextLine();
                 motorVolume = -1;
             }

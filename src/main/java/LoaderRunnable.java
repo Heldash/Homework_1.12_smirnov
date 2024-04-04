@@ -18,11 +18,11 @@ public class LoaderRunnable implements Runnable{
                 ois.close();
                 System.out.println(car.toString());
             } catch (FileNotFoundException e) {
-                throw new RuntimeException(e);
+                System.out.println("Файл не найден: "+e.getMessage());
             } catch (IOException e) {
-                throw new RuntimeException(e);
+                System.out.println("Ошибка при загрузке файла: "+e.getMessage());
             } catch (ClassNotFoundException e) {
-                throw new RuntimeException(e);
+                System.out.println("Ошибка, класс не найден: " + e.getMessage());
             }
         }
     }
